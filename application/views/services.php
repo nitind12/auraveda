@@ -73,13 +73,6 @@
                             <td class="even style2"><div align="right"><?php echo $serviceDetails->DISCOUNT_; ?> </div></td>
                         </tr>
                         <?php } ?>
-                        <?php if($serviceDetails->VAREITY != '• x'){?>
-                        <tr>
-                            <td class="odd style2"><div align="justify"> variety </div></td>
-                            <td class="even style2"><div align="right"><?php echo $serviceDetails->VAREITY; ?> </div></td>
-                        </tr>
-                        <?php } ?>
-                        
                     </tbody>
                 </table>
                 <!-- Above is for Duration, time, fee, free, discount or vareity etc. -->
@@ -95,6 +88,27 @@
                 </ul>
                 <?php }  ?>
                 <!-- Above is for Other treatments as per service category -->
+                <?php if($serviceDetails->SID == 15){?>
+                    <?php 
+                        $vareity_ = explode('•', trim($serviceDetails->VAREITY));
+                    ?>
+                    <h3> Vareity </h3>
+                    <?php if(count($vareity_) > 1){ ?>
+                    <ul type="bullet" style="text-align: justify" class="flower-bullet green">
+                        <?php for($i=0; $i<count($vareity_); $i++){?>
+                            <?php if(trim($vareity_[$i]) != ''){ ?>
+                                <li><?php echo trim($vareity_[$i]); ?></li>
+                            <?php } ?>
+                        <?php } ?>
+                    </ul>
+                    <?php } else { ?>
+                    <?php for($i=0; $i<count($vareity_); $i++){?>
+                        <?php if(trim($vareity_[$i]) != ''){ ?>
+                            <?php echo trim($vareity_[$i]); ?>
+                        <?php } ?>
+                    <?php } ?>
+                    <?php } ?>
+                <?php } ?>
             </div>
         </div>
         <!-- Below is for Service Detail like image, about, inclusions, benefits -->
@@ -125,7 +139,7 @@
             <p>
             <?php for($i=0;$i<count($def_);$i++){ ?>
                 <?php if(trim($def_[$i]) != ''){ ?>
-                    <blockquote> <p><?php echo trim($def_[$i]); ?> </p> </blockquote>
+                    <blockquote style="width:87%; min-height: 40px"> <p><?php echo trim($def_[$i]); ?> </p> </blockquote>
                 <?php } ?>
             <?php } ?>
             </p>
@@ -168,7 +182,7 @@
                     <?php if(count($includes_) > 1){ ?>
                     <ul type="bullet" style="text-align: justify" class="flower-bullet green">
                     <?php for($i=0; $i<count($includes_); $i++){?>
-                        <?php if(trim($includes_[$i]) != ''){ ?>
+                        <?php if(trim($includes_[$i]) != '' && trim($includes_[$i]) != 'x'){ ?>
                             <li><?php echo trim($includes_[$i]); ?></li>
                         <?php } ?>
                     <?php } ?>
