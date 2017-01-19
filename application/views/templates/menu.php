@@ -14,6 +14,7 @@
                 <?php foreach($servicemenu as $serviceitem){?>
                 <li> <a href="<?php echo site_url('wellness/services_we_offer/'.str_replace(' ', '-',$serviceitem->CATEGORY).'/'.$serviceitem->CATEGID.'/'.$serviceitem->SID_FOR_MENU); ?>" title=""> <?php echo $serviceitem->CATEGORY; ?> </a>  </li>
                 <?php } ?>
+		<li> <a href="<?php echo site_url('wellness/membership'); ?>" title=""> Membership Packages </a>  </li>
             </ul>
         </li>
         <li class="<?php if ($menuActive == 4) {echo "current_page_item";} ?>"> <a href="#" title=""> <span> Know more </span> Ayurveda </a>

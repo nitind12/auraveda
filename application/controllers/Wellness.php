@@ -58,7 +58,7 @@ class Wellness extends CI_Controller {
         $service = $data['service_'] = $this->mm->getServiceformenu($sid);
         $data['category'] = $category;
         $data['categid'] = $categid;
-        //$categid = $this->mm->getServiceCategoryID($category);
+        
         $data['serviceDetails'] = $this->mm->getServiceDetail($sid);
 
         $data['desc_'] = $data_['metadesc_'];
@@ -77,13 +77,20 @@ class Wellness extends CI_Controller {
     }
 
     public function membership() {
+        $categid = 7;
+        $category_ = 'Special-Packages';
+
         $data_ = $this->my_library->heading_for_page(5);
 
         $data['desc_'] = $data_['metadesc_'];
         $data['title'] = $data_['title'];
         $data['page_name'] = $data_['pagename'];
-        $data['servicemenu'] = $this->mm->getserviceCategory();
         $data['menuActive'] = 3;
+
+        $data['servicemenu'] = $this->mm->getserviceCategory();
+        $data['allservices'] = $this->mm->getServices($categid);
+        $data['categid'] = $categid;
+        $data['category'] = $category_;
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/menu');
@@ -257,5 +264,78 @@ class Wellness extends CI_Controller {
         $this->load->view('templates/menu');
         $this->load->view($page);
         $this->load->view('templates/footer');
+   }
+
+   function contactus(){
+        $this->email->set_mailtype("html");
+
+        $msg = "Enquiry below:<br /><br />";
+        $msg = $msg . $this->input->post('txtmessage');
+
+        $msg = $msg . "<br />";
+        $msg = $msg . "From<br />";
+        $msg = $msg . "<br /><br />";
+
+        $msg = $msg . "--------------";
+        $msg = $msg . "<br />";
+        $msg = $msg . $this->input->post('txtname');
+
+        $to_ = 'info@auraveda.in,info.auraveda@gmail.com';
+        $from_ = $this->input->post('txtemail');
+        $name_ = 'Enquiry...';
+
+        $this->email->from($from_, $name_);
+        $this->email->to($to_);
+        $this->email->bcc('ttchld@gmail.com');
+
+        $this->email->subject('Enquiry from auraveda.in');
+        $this->email->message($msg);
+
+        if($this->email->send()){
+            $this->session->set_flashdata('allmessage', 'Thanks for Contacting us. We will get back to you very soon...');
+        } else {
+            $this->session->set_flashdata('allmessage', 'Something goes wrong. Please try again...');
+        }
+
+        redirect('wellness/contact');
+   }
+
+   function book_online(){
+        $this->email->set_mailtype("html");
+
+        $msg = "<h2>Online Booking below:</h2><br />";
+        $msg = $msg . "<b>Date of Appointment needed</b>: " . $this->input->post('txtAppointmentDate') . "<br /><br />";
+        $msg = $msg . "<b>Prefered Time</b>: " . $this->input->post('preTime') . "<br /><br />";
+        $msg = $msg . "<b>Appointment Purpose</b>: " . $this->input->post('txtPurpose') . "<br /><br />";
+        $msg = $msg . "<b>No. of Persons</b>: " . $this->input->post('txtNoPerson') . "<br /><br />";
+        $msg = $msg . "<b><u>Special Note</u></b>:<br /> " . $this->input->post('txtSpNotes') . "<br /><br />";
+
+        $msg = $msg . "<br />";
+        $msg = $msg . "From<br />";
+        $msg = $msg . "--------------";
+        $msg = $msg . "<br />";
+        $msg = $msg . $this->input->post('txtFirstName') . " " . $this->input->post('txtLastName') . "<br />";
+        $msg = $msg . "<u><b>Address</b></u>:<br /> " . $this->input->post('txtAddress') . "<br />";
+        $msg = $msg . $this->input->post('txtClientEmail') . "<br />";
+        $msg = $msg . $this->input->post('txtClientMobile');
+
+        $to_ = 'info@auraveda.in,info.auraveda@gmail.com';
+        $from_ = $this->input->post('txtClientEmail');
+        $name_ = 'Online Booking...';
+
+        $this->email->from($from_, $name_);
+        $this->email->to($to_);
+        $this->email->bcc('ttchld@gmail.com');
+
+        $this->email->subject('Online Appointment Booking from auraveda.in');
+        $this->email->message($msg);
+
+        if($this->email->send()){
+            $this->session->set_flashdata('allmessage', 'Thanks for your booking with us. We will get back to you within 24Hrs...');
+        } else {
+            $this->session->set_flashdata('allmessage', 'Something goes wrong. Please try again...');
+        }
+
+        redirect('wellness/book');
    }
 }

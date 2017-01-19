@@ -167,8 +167,8 @@ label span.required{ color:#ff0000; }
 fieldset{ padding:15px; margin:0 0 20px 0; border:1px solid #efefef; }
 legend{ font-weight: bold; }
 
-input[type=text], input[type=password], input.text, textarea{ background-color:#fbf2ce; border:1px solid #bbaf9b; padding:17px 10px; font:normal 12px Tahoma, Geneva, sans-serif; color:#4e4635; width:100%; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; }
-input[type=text]:focus, input[type=password]:focus, input.text:focus, textarea:focus{ border-color:#617b00; }
+input[type=text],input[type=email],input[type=date], input[type=password], input.text, textarea{ background-color:#fbf2ce; border:1px solid #bbaf9b; padding:17px 10px; font:normal 12px Tahoma, Geneva, sans-serif; color:#4e4635; width:100%; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; }
+input[type=text]:focus,input[type=email]:focus,input[type=date]:focus, input[type=password]:focus, input.text:focus,select:focus, textarea:focus{ border-color:#617b00; }
 select{ background-color:#fbf2ce; border:1px solid #bbaf9b; padding:10px; }
 
 input[type=submit] { background:url(../images/btn-bg.jpg) repeat; padding:4px 17px; color:#fffae4; text-transform:uppercase; text-shadow:-1px -1px 0px #634e37; border:none; font:normal 18px 'Oswald', sans-serif; cursor:pointer; margin-top:10px; float:right; }
@@ -575,7 +575,7 @@ ul.related-posts li p { margin-bottom:15px; }
 .gallery-details-inner { position:relative; overflow:hidden; }
 .gallery-details { clear:both; position:relative; overflow:hidden; width:100%; padding-bottom:50px; }
 
-.gallery-container { width:100%; float:left; margin:0px; }
+.gallery-container { width:100%; float:left; margin:0px; position:relative;}
 .slideshow_container { float:left; margin:0px; padding:0px 0px 1px; width:100%; }			
 
 .gallery-image { margin:0px; padding:0px; display:inline; width:100%; }
@@ -712,10 +712,10 @@ ul.related-posts li p { margin-bottom:15px; }
 .booknow-form { float:left; margin:-10px 0px 0px; padding:0px; width:100%; }
 .booknow-form label { width:145px; float:left; margin:13px 10px 0px 0px; clear:both; }
 .booknow-form p { float:left; clear:both; margin:10px 0px 0px; width:100%; }
-.booknow-form input[type="text"], .booknow-form textarea { margin:0px; width:75%; padding:14px 10px; }
+.booknow-form input[type="text"],.booknow-form input[type="email"],.booknow-form input[type="date"], .booknow-form textarea { margin:0px; width:75%; padding:14px 10px; }
 .booknow-form input[type="radio"] { width:30px; }
 .booknow-form .gender { margin:14px 0px 13px; float:left; }
-.booknow-form select { margin:0px; min-width:148px; font-size:12px; }
+.booknow-form select { margin:0px; min-width:148px; font-size:12px; width:75%; }
 .booknow-form select.day { margin-right:10px; float:left; }
 .booknow-form select#treatment_year { margin-right:0px; }
 .booknow-form select.treatment { width:75%; }

@@ -3,7 +3,7 @@
     
     	<!-- **Content Full Width** -->
     	<div class="content content-full-width"> 
-        
+            <div style="clear: both; text-align: center; padding: 10px; color: #ff0000; font-weight: bold; font-size: 20px; "><?php if($this->session->flashdata('allmessage')) { echo $this->session->flashdata('allmessage'); } ?></div>
         	<div class="green-border"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.9922821590644!2d77.24984931449274!3d28.539951695017166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3d757fede37%3A0x90f33258a8795250!2sAuraveda+Wellness+Kerala+Ayurveda+Center%2C+Kalkaji%2C+New+Delhi!5e0!3m2!1sen!2sin!4v1466832681631" width="930" height="340" frameborder="0" style="border:0" allowfullscreen></iframe> </div>
             
             <div class="hr_invisible"> </div>
@@ -28,12 +28,12 @@
             	<div class="enquiry-form">
                     <h1> Enquiry </h1>
                     <div id="ajax_message"></div>
-    				 <form name="frmcontact" id="frmcontact" action="http://wedesignthemes.com/html/spa-treats/php/contact.php" method="post">
-                        <input id="name" name="name" type="text" value="Name"
+    				 <form name="frmcontact" id="frmcontact" action="<?php echo site_url('wellness/contactus'); ?>" method="post">
+                        <input id="txtname" name="txtname" type="text" value="Name"
                             onblur="this.value=(this.value=='') ? 'Name' : this.value;" onfocus="this.value=(this.value=='Name') ? '' : this.value;" />
-                        <input id="email" name="email" type="text" value="Email" 
+                        <input id="txtemail" name="txtemail" type="text" value="Email" 
                             onblur="this.value=(this.value=='') ? 'Email' : this.value;" onfocus="this.value=(this.value=='Email') ? '' : this.value;" />
-                        <textarea id="message" name="message"
+                        <textarea id="txtmessage" name="txtmessage"
                             onblur="this.value=(this.value=='') ? 'Message' : this.value;" onfocus="this.value=(this.value=='Message') ? '' : this.value;" cols="" rows="">Message</textarea>
                         <input name="submit" id="send" type="submit" value="Message" />
                     </form>
