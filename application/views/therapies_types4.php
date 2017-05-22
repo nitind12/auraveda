@@ -7,22 +7,38 @@
         <p align="center"> <a href="#" title="" class="style2">  </a> </p>
         <div class="column full-width">
             <p class="content-full-width style11"> </p>
-            <p align="justify"> <span class="content-full-width style11 style4">Ayurvedic treatment is tailored to each person’s constitution. Practitioners expect patients to be active participants because many Ayurvedic treatments require changes in diet, lifestyle, and habits.</span>  </br>  </br>
-            <h1 align="center" class="title"> <span> Panchakarma Therapies </span> </h1>
+            <h3>Panchakarma Therapies</h3>
+            <p>Ayurvedic treatments and Panchakarma therapies have stood the test of time. As legend has it, Dhanvantari, Physician of the gods, incarnated himself as Divodāsa, a mythical king of Benaras and taught medicine to a group of physicians, including Sushruta himself .</p>
+            <p>According to Ayurveda, ailments, diseases, mental anxiety and stress are caused by imbalance of the Doshas (Vata, Pitta, and Kapha) in the human body. Ayurvedic treatments focus on creating a harmony of the Three Doshas which results in good health and enhancement of body and mind functioning.</p>
+            <p>Auraveda Centre provides traditional Ayurvedic treatments and therapies.</p>
+            <p>Our Doctors will suggest a suitable treatment based on an understanding of your unique body constitution. “Prakruthy”.  Advice on type of treatment may include oral medications, necessary lifestyle changes, diet and yogic practices.</p>
+            <p>Our treatments are delivered by a team of highly skilled experts and therapists. </p>
+            <p>Auraveda treatments do not have any side effects and the medicines we use are carefully prepared under strict ayurvedic guidelines, from ancient Ayurvedic texts, using only natural ingredients.</p>
+            <p>&nbsp;</p>
+            <h3>Curative therapies in Ayurveda </h3>
+            <p align="justify"> <span class="content-full-width style11 style4">Ayurvedic treatment aims at eliminating the disease, reducing symptoms, increasing resistance to disease, and reducing stress and improving mental and physical health.</span>  </br>  </br>
+            <p>Auraveda treatments do not have any side effects and our treatments include formulations that are prepared using only natural ingredients.</p>
+            <p>The treatment is tailored to each person’s constitution. Practitioners expect patients to be active participants because many Ayurvedic treatments require changes in diet, lifestyle, and habits. </p>
+            <h1 align="center" class="title"> <span> Therapies In Ayurveda </span> </h1>
             <div class="column one-fourth">
                 <a href="#" title="" class="rounded-img border alignleft"> <img src="<?php echo base_url('assets_/images/therapy/KADI.jpg'); ?>" alt="" title="" /> </a>
             </div>
 
             <div class="column three-fourth last">
-                <h1> Kadi / Greeva / Janu / Uro - Vasthy </h1>
-                <p> (Duration: 30 minutes) Luke warm oil is allowed to stay on the low back or Neck or knee for 30 minutes in a dam made with dough. This relieves occupa¬tional tension build ups, stiffness, spasm, pains and aches. This is a very effective for Osteoarthritis of knees, sciatic pains, costo-- chondritis, muscular sprains and spondylosis. </p>
+                <h1> Vasthy  </h1>
+                <p>(Duration: 30 minutes) </p>
+                <p>There are 4 types of Vasthy – Kadi, Greeva, Janu, Uro. (according to the location)</p>
+                <p>Luke warm oil is allowed to stay on the lower back, neck or knee for 30 minutes in a dam made with dough. This relieves tension build ups, stiffness, spasm, pains and aches. </p>
+                <p>This is very effective for treating Osteoarthritis of knees, Sciatic pains, Costo-- chondritis, muscular sprains and Spondylosis. </p>
             </div>
             <div class="hr"> </div>
             <div class="column three-fourth">
 
                 <div class="content-right-aligned">
                     <h1> Sirovasthy  </h1>
-                    <p> (Duration: 40 minutes) A long chef's cap is fixed on the head in which medicated luke warm oil is retained for a definite time for approx. 30 minutes. This treatment is for visual problems, memory ailments, sleep distur¬bances, headache, and Parkinson's disease. </p>
+                    <p> (Duration: 40 to 60 minutes)</p>
+                    <p>A long chef's cap is fixed on the head in which medicated luke warm oil is retained for approx. 30 to 50 minutes. </p>
+                    <p>An effective treatment for visual problems, memory ailments, sleep disturbances, headaches and Parkinson's disease, facial palsy, stroke paralysis cases.  </p>
                 </div>
             </div>
             <div class="column one-fourth last">

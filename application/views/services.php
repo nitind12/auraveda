@@ -39,8 +39,25 @@
                 <?php } ?>
                 <!-- Above is for Consulation Includes -->
                 <h3> Please Note </h3>
-
+                <?php if($serviceDetails->SID == 15){?>
                 <!-- Below is for Duration, time, fee, free, discount or vareity etc. -->
+                <table border="0" cellpadding="0" cellspacing="0" class="price-table">
+                    <tbody> 
+                        <tr>
+                            <td class="odd style2"><div align="justify"> Option 1(50min)  </div></td>
+                            <td class="even style2"><div align="right"> Rs.1000  </div></td>
+                        </tr>
+                        <tr>
+                            <td class="odd style2"><div align="justify"> Option 2 (1 Hour 15 min)   </div></td>
+                            <td class="even style2"><div align="right"> Rs.1200 </div></td>
+                        </tr>
+                        <tr>
+                            <td class="odd style2"><div align="justify"> Option 3 (1 Hour 30 min)  </div></td>
+                            <td class="even style2"><div align="right"> Rs.3000  </div></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <?php } else {?>
                 <table border="0" cellpadding="0" cellspacing="0" class="price-table">
                     <tbody>
                         <?php if($serviceDetails->DURATION != 'x'){?>
@@ -75,6 +92,7 @@
                         <?php } ?>
                     </tbody>
                 </table>
+                <?php } ?>
                 <!-- Above is for Duration, time, fee, free, discount or vareity etc. -->
 
                 <!-- Below is for Other treatments as per service category -->
@@ -92,7 +110,7 @@
                     <?php 
                         $vareity_ = explode('•', trim($serviceDetails->VAREITY));
                     ?>
-                    <h3> Vareity </h3>
+                    <h3> Varieties </h3>
                     <?php if(count($vareity_) > 1){ ?>
                     <ul type="bullet" style="text-align: justify" class="flower-bullet green">
                         <?php for($i=0; $i<count($vareity_); $i++){?>
@@ -200,8 +218,17 @@
             </p>
             <!-- Above is for Service Detail like image, about, inclusions, benefits -->
             <div class="hr_invisible"> </div>
-            <a href="booknow.html" class="big-ico-button red book"> <span> Book an Appointment </span> </a>
-            <a href="giftcard.html" class="big-ico-button green leaf"> <span> Gift a Friend </span> </a>
+            <?php if($categid == 4){ ?>
+                <ul class="flower-bullet green">
+                    <li><a href="<?php echo base_url('assets_/dwlds/Terms&conditions-treatmentpackages.pdf'); ?>" target="_blank"> Terms & Conditions for Heal Your Problem</a></li>
+                </ul>
+            <?php }else if($categid == 5){?>
+            <ul class="flower-bullet green">
+                    <li><a href="<?php echo base_url('assets_/dwlds/Terms&conditions-wellnesspackages.pdf'); ?>" target="_blank"> Terms & Conditions for Wellness Therapies</a></li>
+                </ul>
+            <?php }?>
+            <a href="<?php echo site_url('wellness/book'); ?>" class="big-ico-button red book"> <span> Book an Appointment </span> </a>
+            <a href="<?php echo site_url('wellness/giftcard'); ?>" class="big-ico-button green leaf"> <span> Gift a Friend </span> </a>
         </div>
 
         <div class="hr"> </div>

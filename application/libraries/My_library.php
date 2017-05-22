@@ -73,6 +73,11 @@ class My_library {
                 $data['metadesc_'] = 'Auraveda is a center for alternative medicine, located in Kalkaji, New Delhi and is devoted to our age–old Indian system of medicine, Ayurveda, with holistic approach of health care.'; // 150 to 160 char Max including spaces
                 $data['pagename'] = 'Location';
                 break;
+            case 15:
+                $data['title'] = 'Gift a Card in Auraveda Wellness';
+                $data['metadesc_'] = 'Auraveda is a center for alternative medicine, located in Kalkaji, New Delhi and is devoted to our age–old Indian system of medicine, Ayurveda, with holistic approach of health care.'; // 150 to 160 char Max including spaces
+                $data['pagename'] = 'BUY GIFT CARDS FOR YOUR LOVED ONES';
+                break;
             default:
                 $data['title'] = 'Heading Error';
                 $data['metadesc_'] = ''; // 150 to 160 char Max including spaces

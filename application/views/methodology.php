@@ -3,19 +3,18 @@
 
     <!-- **Content Full Width** -->
     <div class="content content-full-width">
-        <img src="<?php echo base_url('assets_/images/post-images/ayus.jpg');?>" alt="ayush" /></br></br>
-        <p align="center"> <a href="blog-single.html" title="" class="style2"> Ayurvedic Treatment Methodology </a> </p>
+        <img src="<?php echo base_url('assets_/images/post-images/tridosh.jpg');?>" alt="ayush" /></br></br>
+        <h1> Ayurvedic Treatment Methodology</h1>
         <div class="column full-width">
             <p class="content-full-width style11"> </p>
-            <p align="justify"> <span class="content-full-width style11">Ayurvedic treatment is tailored to each person’s constitution. Practitioners expect patients to be active participants because many Ayurvedic treatments require changes in diet, lifestyle, and habits.</span>  </br>  </br>
-                <span class="style3">Treatment practices</span>  </br>
-                Ayurvedic treatment goals include eliminating impurities, reducing symptoms, increasing resistance to disease, and reducing worry and increasing harmony in
-                The patient’s life. The practitioner uses a variety of methods to achieve these goals: </br></br>
-
-                •	Eliminating Impurities: Panchakarma focuses on eliminating toxins, which mainly formed out of reactions of undigested food that sticks to tissues to hinder its normal functions and those which are accumulated due to improper diet and life styles. Panchakarma therapy is both preventative for healthy people to maintain and improve excellent cellular function, and curative for those experiencing disease.  TAB [Know more] {This link should forward visitor to the page “The Role Of Pachakarma”}</br></br>
-                •	Reducing symptoms & worries: Practitioner suggests various treatment options in Ayurveda, with physical exercises, stretching, Yoga practices, breathing exercises or Pranayama and advises modification in Diet and life styles. Practitioners may recommend avoiding situations that cause worry and use techniques that promote release of negative emotions.</br></br>
-                •	Boost the Immunity: The practitioner may combine several herbs, proteins, minerals, and vitamins in tonics to improve digestion and increase appetite and immunity. These tonics based on formulas from ancient Ayurvedic texts.</p></br>
-            </br>
-            <a href="services4.html">Know more @Auraveda wellness...</a></br>
+            <h3>Ayurveda – The Science of Life </h3>
+            <h3>Holistic solutions for mental and physical “Wellness”</h3>
+            <p align="justify"> <span class="content-full-width style11">Ayurveda is a 5000 year old Indian medical science based on the teachings of Sage Sushruta, who compiled the Suśruta-saṃhitā.</span></p>
+            <p>The Suśruta-saṃhitā contains descriptions of 1,120 illnesses, 700 medicinal plants, 64 preparations from mineral sources and 57 preparations based on animal sources.</p>
+            <p>Globalized and modernized practices derived from Ayurveda traditions have been integrated in general wellness applications and as well in some cases in medical use.</p>
+            <p>Ayurveda not only aims to curing your ailment but also to restore the harmony in the body to avoid re-emergence - a holistic wellness.</p>
+            <p>Auraveda offers practical and realistic alternate healthcare solutions both in preventive and curative areas through a variety of treatment programs</p>
+            <p>We at Auraveda offer rejuvenation therapies, detoxification and clinical treatments along with beauty care packages in harmony with the principles of Ayurveda.</p>
+            <p>Our doctors customize a course of treatment that is tailored to YOU to maintain a balance of the doshas within you to attain and lead a healthy life.</p>
         </div>
     </div> <!-- **Content Full Width - End** -->

@@ -3,7 +3,9 @@
 
     <!-- **Content Full Width** -->
     <div class="content content-full-width">
-
+        <div style="clear: both; text-align: center; padding: 10px; color: #ff0000; font-weight: bold; font-size: 20px; "><?php if ($this->session->flashdata('allmessage')) {
+    echo $this->session->flashdata('allmessage');
+} ?></div>
         <h1 class="title"> <span> Apply Here </span> </h1>
         <p> Please Apply here for the desired job roles, you are eligible for. We are hiring for all departments of Ayurvedic Centre's, Our HR Manager will be in touch with you, for the Telephonic Interview. <strong> You can also send your C.V to "info@auraveda.in"</strong></p>
 
@@ -11,166 +13,189 @@
 
         <div class="column two-third">
             <div id="ajax_message"></div>
-            <form id="booknow-form" action="http://wedesignthemes.com/html/spa-treats/php/booknow.php" method="get" class="booknow-form">
-                <p>
-                    <label> Post Applied For <span class="required"> * </span> </label>
-                    <input name="fname" type="text" />
-                </p>
-                <p>
-                    <label> Full Name <span class="required"> * </span> </label>
-                    <input name="lname" type="text" />
-                </p>
-                <p>
-                    <label> Gender </label>
-                    <span class="gender">
-                        <input type="radio" class="radiob1" id="Male" name="Gender" value="Male" />
-                        Male
-                        <input type="radio" class="Female" id="Female" name="Gender" value="Female" checked="checked" />
-                        Female
-                    </span>
-                </p>
-                <p>
-                    <label> Telephone <span class="required"> * </span> </label>
-                    <input name="phone" type="text" />
-                </p>
-                <p>
-                    <label> Email <span class="required"> * </span> </label>
-                    <input name="email" type="text" />
-                </p>
-                <p>
-                    <label> Address </label>
-                    <textarea name="address" cols="" rows=""></textarea>
-                </p>
-                <p>
-                    <label> Total Experience <span class="required"> * </span> </label>
-                    <select class="day" id="treatment_day" name="treatment_day">
-                        <option value="">Year</option>
-                        <option value="01">01</option>
-                        <option value="02">02</option>
-                        <option value="03">03</option>
-                        <option value="04">04</option>
-                        <option value="05">05</option>
-                        <option value="06">06</option>
-                        <option value="07">07</option>
-                        <option value="08">08</option>
-                        <option value="09">09</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                    </select>
+            <?php
+            $data = array(
+                'name' => 'frmCareer_',
+                'id' => 'frmCareer_',
+                'class' => 'booknow-form',
+            );
+            ?>
+                <?php echo form_open_multipart('wellness/apply', $data); ?>
+            <p>
+                <label> Post Applied for <span class="required"> * </span> </label>                    
+                <?php
+                $data = array(
+                    'type' => 'text',
+                    'name' => 'txtPostAppliedFor',
+                    'id' => 'txtPostAppliedFor',
+                    'required' => 'required'
+                );
+                $options = array();
+                $options['Ayurvedic Doctor [BAMS]'] = 'Ayurvedic Doctor [BAMS]';
+                $options['Yoga & Naturopathic Doctor [BNYS]'] = 'Yoga & Naturopathic Doctor [BNYS]';
+                $options['Certified Yoga Trainer'] = 'Certified Yoga Trainer';
+                $options['Ayurveda Therapist cum Yoga Traine'] = 'Ayurveda Therapist cum Yoga Traine';
+                $options['Ayurveda Therapist'] = 'Ayurveda Therapist';
+                $options['Centre Admin cum Marketing Executive'] = 'Centre Admin cum Marketing Executive';
+                $options['Store Supervisor'] = 'Store Supervisor';
+                $options['Business Development Manager'] = 'Business Development Manager';
+                $options['Marketing Assistant'] = 'Marketing Assistant';
+                $options['Receptionist cum Office Assistant'] = 'Receptionist cum Office Assistant';
+                echo form_dropdown($data, $options, '');
+                ?> 
+            </p>
+            <p>
+                <label> Full Name <span class="required"> * </span> </label>
+                <?php
+                $data = array(
+                    'type' => 'text',
+                    'name' => 'txtName',
+                    'id' => 'txtName',
+                    'required' => 'required'
+                );
+                echo form_input($data);
+                ?>
+            </p>
+            <p>
+                <label for="txtGender">Gender</label><br>
+                <?php
+                $data = array(
+                    'type' => 'radio',
+                    'required' => 'required',
+                    'name' => 'optGender',
+                    'id' => 'optMale',
+                    'value' => 'M',
+                    'checked' => 'checked',
+                );
+                echo form_input($data);
+                ?>
+                Male
+                <?php
+                $data = array(
+                    'type' => 'radio',
+                    'required' => 'required',
+                    'name' => 'optGender',
+                    'id' => 'optFemale',
+                    'value' => 'F',
+                );
+                echo form_input($data);
+                ?>
+                Female
+            </p>
+            <p>
+                <label> Mobile No. <span class="required"> * </span> </label>
+                <?php
+                $data = array(
+                    'type' => 'text',
+                    'name' => 'txtClientMobile',
+                    'id' => 'txtClientMobile',
+                    'pattern' => '[0-9]*',
+                    'oninvalid' => "setCustomValidity('Plz enter 10 digit Contact Number')",
+                    'onchange' => "try{setCustomValidity('')}catch(e){}",
+                    'minlength' => '10',
+                    'maxlength' => '10',
+                    'required' => 'required'
+                );
+                echo form_input($data);
+                ?>
+            </p>
+            <p>
+                <label> Email <span class="required"> * </span> </label>
+                <?php
+                $data = array(
+                    'type' => 'email',
+                    'name' => 'txtClientEmail',
+                    'id' => 'txtClientEmail',
+                    'required' => 'required'
+                );
+                echo form_input($data);
+                ?>
+            </p>
+            <p>
+                <label> Address</label>
+                <?php
+                $data = array(
+                    'type' => 'text',
+                    'name' => 'txtAddress',
+                    'id' => 'txtAddress',
+                );
+                echo form_textarea($data);
+                ?>
+            </p>
+            <p>
+                <label> Total Experience <span class="required"> * </span> </label>
+                <select class="day" id="treatment_day" name="experienceYear" style="width: 20px">
+                    <option value="">Year</option>
+                    <?php for ($i = 1; $i <= 25; $i++) { ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+<?php } ?>
+                </select>
 
-                    <select class="day" id="treatment_month" name="treatment_month">
-                        <option value="">Month</option>
-                        <option value="01">01</option>
-                        <option value="02">02</option>
-                        <option value="03">03</option>
-                        <option value="04">04</option>
-                        <option value="05">05</option>
-                        <option value="06">06</option>
-                        <option value="07">07</option>
-                        <option value="08">08</option>
-                        <option value="09">09</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                    </select>
-                    <select class="day" id="treatment_year" name="treatment_year">
-                        <option value="">Days</option>
-                        <option value="01">01</option>
-                        <option value="02">02</option>
-                        <option value="03">03</option>
-                        <option value="04">04</option>
-                        <option value="05">05</option>
-                        <option value="06">06</option>
-                        <option value="07">07</option>
-                        <option value="08">08</option>
-                        <option value="09">09</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="20">26</option>
-                        <option value="21">27</option>
-                        <option value="22">28</option>
-                        <option value="23">29</option>
-                        <option value="24">30</option>
-                    </select>
-                </p>
-                <p>
-                    <label> Notice Period <span class="required"> * </span> </label>
-                    <select class="salutation" id="PreferredTime" name="PreferredTime">
-                        <option>Joining Could be...</option>
-                        <option>Immediately</option>
-                        <option>Witing 7 Days</option>
-                        <option>Witing 15 Days</option>
-                        <option>Witing 1 Month</option>
-                        <option>Witing 2 Month</option>
-                    </select>
-                </p>
-                <p>
-                    <label> Preferred Location </label>
-                    <select class="treatment" id="treatment" name="treatment">
+                <select class="day" id="treatment_month" name="experienceMonth" style="width: 20px">
+                    <option value="">Month</option>
+                    <?php for ($i = 1; $i <= 12; $i++) { ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+<?php } ?>
+                </select>
+                <select class="day" id="treatment_year" name="experienceDays" style="width: 20px">
+                    <option value="">Days</option>
+                    <?php for ($i = 1; $i <= 31; $i++) { ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+<?php } ?>
+                </select>
+            </p>
+            <p>
+                <label> Notice Period <span class="required"> * </span> </label>
+                <select class="salutation" id="noticePeriod" name="noticePeriod">
+                    <option>Joining Could be...</option>
+                    <option>Immediately</option>
+                    <option>Within 7 Days</option>
+                    <option>Within 15 Days</option>
+                    <option>Within 1 Month</option>
+                    <option>Within 2 Month</option>
+                </select>
+            </p>
+            <p>
+                <label> Preferred Location </label>
+                <select class="treatment" id="treatment" name="preferredLocation">
 
-                        <option value="">Delhi NCR</option>
-                        <option value="">North India</option>
-                        <option value="">South India</option>
-                        <option value="">East India</option>
-                        <option value="">West India</option>
-                        <option value="">Abroad </option>
-                    </select>
-                </p>
-                <p>
-                    <label> Salary Expectations <span class="required"> * </span> </label>
-                    <input name="persons" type="text" />
-                </p>
-                <p>
-                    <label> Paste Your Resume </label>
-                    <textarea name="requests" cols="" rows=""></textarea>
-                </p>
-                <p class="submit">
-                    <input name="booknow" type="submit" value="Book Now" />
-                </p>
+                    <option value="Delhi NCR">Delhi NCR</option>
+                    <option value="North India">North India</option>
+                    <option value="South India">South India</option>
+                    <option value=">East India">East India</option>
+                    <option value="West India">West India</option>
+                    <option value="Any where in India">Any where in India </option>
+                    <option value="Abroad">Abroad </option>
+                </select>
+            </p>
+            <p>
+                <label> Salary Expectations <span class="required"> * </span> </label>
+                <input name="salaryExpectation" type="text" />
+            </p>
+            <p>
+                <label> Attach Your Resume in PDF format</label>
+                <input type="file" name="txtUploadResume"/>
+            </p>
+            <p class="submit">
+                <input name="booknow" type="submit" value="Apply" />
+            </p>
             </form>
         </div>
 
         <div class="column one-third last">
             <div class="booknow-page">
                 <h1> Contact Details </h1>
-                <ul class="contact-details">
-                    <li> <span class="address"> </span> <p align="justify"> 19/2, EPDP raod, Adjacent to B-Block <br /> Gurudwara, Opp to, CR Park Main Rd <br /> Block B, Kalkaji, New Delhi 110019 </p> </li>
+                <ul class="contact-details">   
+                    <li> <span class="address"> </span> <p align="justify"> 19/2, EPDP Road, Adjacent to "B" Block Gurudwara, Opp to CR Park Main Rd, Kalkaji, New Delhi 110019</p> </li>             
                     <li> <span class="mail"> </span> <p align="justify"> <a href="#" title=""> info@auraveda.in </a> </p> </li>
-                    <li> <span class="phone"> </span> <p align="justify"> 01145049180, +918527008995  </p> </li>
+                    <li> <span class="phone"> </span> <p align="justify"> 01145049180, +918527008995  </p> </li>                        
                 </ul>
                 <h4 class="title"> <span> Working Hours </span> </h4>
-                <div class="notice"> <span class="left"> Treatment : </span> <span class="right"> 8am - 8pm </span> </div>
+                <div class="notice"> <span class="left"> Therapies : </span> <span class="right"> 8am - 8pm </span> </div>
                 <div class="notice"> <span class="left"> Dr.Appointment : </span> <span class="right"> 10am - 8pm </span> </div>
-                <p align="justify"> <strong> Note: </strong> Wednesday is our weekly off. For special urgency's or specially customized, regular treatments only, you can take appointments in advance. </p>
+                <p align="justify"> <strong> Note: </strong> <b><i>Wednesday is our weekly off.</i></b><br> A prior booking and scheduling has to be done for all specially customized and regular treatment sessions. Call 01145049180 or 8527008995. Your timely arrival is appreciated. </p>
 
-            </div>
+            </div> 
         </div>
 
     </div> <!-- **Content Full Width - End** -->

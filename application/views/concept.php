@@ -3,13 +3,24 @@
 
     <!-- **Content Full Width** -->
     <div class="content content-full-width">
-        <img src="<?php echo base_url('assets_/images/post-images/rejuvenate.png'); ?>" alt="ayush" /></br></br>
+        <img src="<?php echo base_url('assets_/images/post-images/may-i-meditate_meditation_0.jpg'); ?>" alt="ayush" /></br></br>
         <p align="center"> <a href="blog-single.html" title="" class="style2">Concept Of Rejuvenation </a> </p>
         <div class="column full-width">
             <p class="content-full-width style11"> </p>
-            <p align="justify"> <span class="content-full-width style11">The Rejuvenation therapy at AURAVEDA teaches ways to become naturally beautiful, which is not just limited to the physical body but extends to subtle qualities and vitality of a person. Hence, the Rejuvenation therapy is considered to be as an integral part of ongoing self-care that helps beauty be with you throughout life and a fresh start in the process of making health-supporting lifestyle changes. Based on the fundamental laws of nature, Ayurveda propounds a highly evolved science of life, health and cure where the concept of aging and rejuvenation finds a prominent place. </br>
-
-                    </br>After birth, the growth and senility, ultimately leading to death are inevitable processes. It is correctly stated that, aging begins before birth and continuous throughout life at different rates, in different races for different individuals and for different tissues of the body. It involves two opposite processes and that simultaneously come into operation, growth and atrophy. Ayurveda is the first to describe the science of life, its central theme being efforts to put life from disease and aging. Rejuvenation at AURAVEDA WELLNESS is delivered in the form of rejuvenative therapies, recipes, dietary regimen and special health promoting conduct and behavior. It ultimately contributes one to attain longevity, memory, intelligence, freedom from disorders, youthful age, excellence of luster, complexion and voice, optimum strength of physique and sense organs, successful words, respectability and brilliance. </span>  </br>
-            </p>
+            <p align="justify">Rejuvenation therapy at AURAVEDA teaches ways to become naturally beautiful, to revitalize you physically and spiritually. Beauty that is both external as well as internal.</p>
+            <p>Rejuvenation therapy is an integral part of ongoing self-care that helps maintain beauty and sustain a health-supporting lifestyle. Based on the fundamental laws of nature, </p>
+            <p>AURAVEDA WELLNESS provides rejuvenation therapies, recipes, dietary regimen and special health promoting methodologies. It contributes to the attainment of longevity, memory, intelligence, freedom from disorders, excellence of luster, complexion and voice, optimum strength of physique and sense organs.</p>
+            <p>Ayurveda is the science of  natural healing that has its origins in the Vedic Era. Today Ayurveda has been enjoying a major resurgence throughout the world. The treatment and therapies are based on  creating a harmonious mind- body balance combined with treatments based on an individual’s unique Prakruti  and requirements.</p>
+            <p>The Ayurvedic medical texts dating back several thousands of years. Ayurveda divides medical science into eight components </p>
+            <p align="justify">1. <b>Kāyacikitsā:</b> General medicine, Includes all general health problems and systemic diseases. </br></br>
+                2. <b>Kaumāra-bhṛtya:</b> The treatment of children, Pediatrics</br></br>
+                3. <b>Śalyatantra:</b> Surgical techniques and the extraction of foreign objects</br></br>
+                4. <b>Śālākyatantra:</b> Treatment of ailments affecting ears, eyes, nose, mouth, etc. ("ENT")</br></br>
+                5. <b>Bhūtavidyā:</b> Pacification of imbalances affected to the mind. It deals with Psychological disorders. </br></br>
+                6. <b>Agadatantra:</b> Toxicology. Deals with Poisoning and its treatments. </br></br>
+                7. <b>Rasāyanatantra:</b> Rejuvenation and tonics for increasing lifespan, intellect and strength</br></br>
+                8. <b>Vājīkaraṇatantra:</b> Aphrodisiacs and treatments for the betterment of male and female Reproductive system.</p>  
+            <p>Ayurvedic treatments focus on creating a harmony of the<i> Three Doshas which results in good health and enhancement of body and mind functioning.</i></p>
+            <p>Auraveda Centre provides traditional Ayurvedic treatments and therapies.</p></p>
         </div>
     </div> <!-- **Content Full Width - End** -->

@@ -7,6 +7,14 @@
         <p align="center"> <a href="#" title="" class="style2">  </a> </p>
         <div class="column full-width">
             <p class="content-full-width style11"> </p>
+            <h3>Panchakarma Therapies</h3>
+            <p>Ayurvedic treatments and Panchakarma therapies have stood the test of time. As legend has it, Dhanvantari, Physician of the gods, incarnated himself as Divodāsa, a mythical king of Benaras and taught medicine to a group of physicians, including Sushruta himself .</p>
+            <p>According to Ayurveda, ailments, diseases, mental anxiety and stress are caused by imbalance of the Doshas (Vata, Pitta, and Kapha) in the human body. Ayurvedic treatments focus on creating a harmony of the Three Doshas which results in good health and enhancement of body and mind functioning.</p>
+            <p>Auraveda Centre provides traditional Ayurvedic treatments and therapies.</p>
+            <p>Our Doctors will suggest a suitable treatment based on an understanding of your unique body constitution. “Prakruthy”.  Advice on type of treatment may include oral medications, necessary lifestyle changes, diet and yogic practices.</p>
+            <p>Our treatments are delivered by a team of highly skilled experts and therapists. </p>
+            <p>Auraveda treatments do not have any side effects and the medicines we use are carefully prepared under strict ayurvedic guidelines, from ancient Ayurvedic texts, using only natural ingredients.</p>
+
             <p align="justify"> <span class="content-full-width style11 style4">Ayurvedic treatment is tailored to each person’s constitution. Practitioners expect patients to be active participants because many Ayurvedic treatments require changes in diet, lifestyle, and habits.</span>  </br>  </br>
             <h1 align="center" class="title"> <span> Therapies In Ayurveda </span> </h1>
             <div class="column one-fourth">
