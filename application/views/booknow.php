@@ -3,19 +3,21 @@
 
     <!-- **Content Full Width** -->
     <div class="content content-full-width">
-        <div style="clear: both; text-align: center; padding: 10px; color: #ff0000; font-weight: bold; font-size: 20px; "><?php if ($this->session->flashdata('allmessage')) {
-    echo $this->session->flashdata('allmessage');
-} ?></div>
+        <div style="clear: both; text-align: center; padding: 10px; color: #ff0000; font-weight: bold; font-size: 20px; "><?php
+            if ($this->session->flashdata('allmessage')) {
+                echo $this->session->flashdata('allmessage');
+            }
+            ?></div>
         <h1 class="title"> <span> Book Now </span> </h1>
         <p> Book appointments with our ayurvedic doctor, for consultation, health cheackup and lifestyle consultation. You can also book an appointment for treatment sessions - Book Doctor Appointments Online.  <strong>[ Dr.Consultation Fees = Rs.250/-only ]</strong></p>
 
         <div class="hr_invisible"> </div>
 
         <div class="column two-third">
-                    <?php if ($this->session->flashdata('_msg_')) { ?>
+            <?php if ($this->session->flashdata('_msg_')) { ?>
                 <div class="row">
                     <div class="col-sm-12 border-bottom" style="text-align: center; padding: 5px; color: #ff0000; font-weight: bold; background: #ffff00; border-radius: 10px">
-    <?php echo $this->session->flashdata('_msg_'); ?>
+                        <?php echo $this->session->flashdata('_msg_'); ?>
                     </div>
                     <div class="col-sm-12">
                         &nbsp;
@@ -29,7 +31,7 @@
                 'class' => 'booknow-form',
             );
             ?>
-                <?php echo form_open('wellness/book_online', $data); ?>
+            <?php echo form_open('wellness/book_online', $data); ?>
             <p>
                 <label> First Name <span class="required"> * </span> </label>
                 <?php
@@ -63,7 +65,7 @@
                     'required' => 'required',
                     'name' => 'optGender',
                     'id' => 'optMale',
-                    'value' => 'M',
+                    'value' => 'Male',
                     'checked' => 'checked',
                 );
                 echo form_input($data);
@@ -75,7 +77,7 @@
                     'required' => 'required',
                     'name' => 'optGender',
                     'id' => 'optFemale',
-                    'value' => 'F',
+                    'value' => 'Female',
                 );
                 echo form_input($data);
                 ?>
@@ -186,18 +188,39 @@
                 <?php
                 $data = array(
                     'type' => 'text',
-                    'name' => 'txtNoPerson',
-                    'id' => 'txtNoPerson',
+                    'name' => 'txtNoMales',
+                    'id' => 'txtNoMales',
+                    'pattern' => '[1-4]*',
+                    'oninvalid' => "setCustomValidity('Plz enter Maximum 4 person')",
+                    'onchange' => "try{setCustomValidity('')}catch(e){}",
+                    'minlength' => '1',
+                    'maxlength' => '1',
+                    'placeholder' => 'No. of Males',
+                    'required' => 'required',
+                    'onblur' => 'checkPerson()',
+                    'style' => 'width:230px;'
+                );
+                echo form_input($data);
+                ?>
+
+                <?php
+                $data = array(
+                    'type' => 'text',
+                    'name' => 'txtNoFeMales',
+                    'id' => 'txtNoFeMales',
                     'pattern' => '[0-9]*',
                     'oninvalid' => "setCustomValidity('Plz enter Person in Number')",
                     'onchange' => "try{setCustomValidity('')}catch(e){}",
                     'minlength' => '1',
                     'maxlength' => '3',
-                    'required' => 'required'
+                    'placeholder' => 'No. of Females',
+                    'required' => 'required',
+                    'onblur' => 'checkPerson()',
+                    'style' => 'width:230px;'
                 );
                 echo form_input($data);
                 ?>
-            </p>
+            </p>           
             <p>
                 <label> Special Notes</label>
                 <?php
@@ -212,7 +235,7 @@
             <p class="submit">
                 <input name="booknow" type="submit" value="Book Now" />
             </p>
-<?php echo form_close(); ?>
+            <?php echo form_close(); ?>
         </div>
 
         <div class="column one-third last">
@@ -232,3 +255,24 @@
         </div>
 
     </div> <!-- **Content Full Width - End** -->
+
+
+    <script>
+        function checkPerson() {
+            var males = document.getElementById("txtNoMales").value;
+            var females = document.getElementById("txtNoFeMales").value;
+            if (males === "")
+                males = 0;
+            if (females === "")
+                females = 0;
+
+            var result = parseInt(males) + parseInt(females);
+            //alert(result);
+            if (result>4) {
+                alert('Total No of Persons (Male+Female) should not exceed 4');
+                document.getElementById("txtNoMales").value='';
+                document.getElementById("txtNoFeMales").value='';
+                document.getElementById("txtNoMales").focus();
+            }
+        }
+    </script>

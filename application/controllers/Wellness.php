@@ -322,7 +322,7 @@ class Wellness extends CI_Controller {
         $msg = $msg . "<b>Date of Appointment needed</b>: " . $this->input->post('txtAppointmentDate') . "<br /><br />";
         $msg = $msg . "<b>Prefered Time</b>: " . $this->input->post('preTime') . "<br /><br />";
         $msg = $msg . "<b>Appointment Purpose</b>: " . $this->input->post('txtPurpose') . "<br /><br />";
-        $msg = $msg . "<b>No. of Persons</b>: " . $this->input->post('txtNoPerson') . "<br /><br />";
+        $msg = $msg . "<b>No. of Persons: </b><br> Male: " . $this->input->post('txtNoMales') .  "  FeMale: " . $this->input->post('txtNoFeMales') . "<br /><br />";
         $msg = $msg . "<b><u>Special Note</u></b>:<br /> " . $this->input->post('txtSpNotes') . "<br /><br />";
 
         $msg = $msg . "<br />";
@@ -330,11 +330,13 @@ class Wellness extends CI_Controller {
         $msg = $msg . "--------------";
         $msg = $msg . "<br />";
         $msg = $msg . $this->input->post('txtFirstName') . " " . $this->input->post('txtLastName') . "<br />";
+        $msg = $msg . "Gender: " . $this->input->post('optGender') . "<br />";
         $msg = $msg . "<u><b>Address</b></u>:<br /> " . $this->input->post('txtAddress') . "<br />";
         $msg = $msg . $this->input->post('txtClientEmail') . "<br />";
         $msg = $msg . $this->input->post('txtClientMobile');
 
         $to_ = 'info.auraveda@gmail.com';
+        //$to_ = 'navtewari@gmail.com';
         $from_ = $this->input->post('txtClientEmail');
         $name_ = 'Online Booking...';
 
